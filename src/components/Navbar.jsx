@@ -26,13 +26,13 @@ const Navbar = () => {
       </div>
 
       {/* nav icon */}
-      <div onClick={handleNav} className="cursor-pointer block md:hidden z-[999999]">
-        {!nav ? <svg className="" width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg> : <svg className="" width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>}
+      <div onClick={handleNav} className="cursor-pointer block md:hidden z-[99999]">
+        {nav ? <svg className="" width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg> : <svg className="" width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>}
       </div>
 
            
 
-      <div className={!nav ? "fixed top-0 right-0 bottom-0 bg-[#fffdfa] h-screen w-[60%] p-5 md:hidden z-[9999] ease-in-out  duration-500" : "fixed top-0 right-[-100%] bottom-0 h-screen w-[60%] ease-in-out duration-700"}>
+      <div className={nav ? "fixed top-0 right-0 bottom-0 bg-[#fffdfa] h-screen w-[60%] p-5 md:hidden z-[9999] ease-in-out  duration-500" : "fixed top-0 right-[-100%] bottom-0 h-screen w-[60%] ease-in-out duration-700"}>
         
       <ul className="py-[10%] mt-20 text-2xl font-writing font-medium">
           <li className="mb-6 py-2 cursor-pointer hover:text-[#e9ab53] hover:transition">Home</li>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <li className="mb-6 py-2 cursor-pointer hover:text-[#e9ab53] hover:transition">Categories</li>
         </ul>
       </div>
-      <div className={!nav ? 'bg-black w-screen h-full  top-0 left-0 right-0 bottom-0 opacity-[0.3] fixed' : 'hidden'}></div>
+      <div className={nav ? 'bg-black w-screen h-full  top-0 left-0 right-0 bottom-0 opacity-[0.3] fixed' : 'hidden'}></div>
     </div>
   );
 };
